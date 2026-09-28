@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Lucky Spin — Zakręć kołem i odkryj swój bonus</title>
+<meta name="description" content="Weź udział w promocji, zakręć kołem i sprawdź, jaka nagroda promocyjna jest dla Ciebie dostępna. Podlega regulaminowi." />
+<meta property="og:title" content="Lucky Spin — Zakręć kołem i odkryj swój bonus" />
+<meta property="og:description" content="Twój kolejny bonus może być o jeden obrót od Ciebie." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2519920491824305');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2519920491824305&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+</head>
+<body>
+
+<!-- ambient background layers -->
+<div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="brand" id="brand"></div>
+  <span class="header-badge" id="headerBadge"></span>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <span class="pill" id="legalBadge"></span>
+      <h1 class="headline" id="headline"></h1>
+      <p class="subheadline" id="subheadline"></p>
+      <p class="support" id="support"></p>
+    </div>
+  </section>
+
+  <!-- ============ KOŁO ============ -->
+  <section class="wheel-section" id="wheelSection">
+    <div class="wheel-stage">
+      <div class="wheel-pointer" aria-hidden="true"></div>
+      <div class="wheel-ring">
+        <canvas id="wheel" width="620" height="620" role="img" aria-label="Koło z nagrodami"></canvas>
+        <button class="spin-btn" id="spinBtn" aria-label="Zakręć kołem">
+          <span class="spin-btn__text">ZAKRĘĆ</span>
+        </button>
+      </div>
+    </div>
+    <p class="wheel-caption" id="wheelCaption">Kliknij, aby odkryć swój bonus</p>
+  </section>
+
+  <!-- ============ DLACZEGO DARMOWE SPINY ============ -->
+  <section class="section" id="whySection">
+    <div class="container">
+      <h2 class="section-title">🎰 DARMOWE SPINY: JEDNA Z NAJBARDZIEJ ZNANYCH NAGRÓD W PROMOCJACH SLOTÓW</h2>
+      <p class="section-lead">Darmowe spiny pozwalają wypróbować wybrane kwalifikujące się gry bez bezpośredniego użycia głównego salda na każdy obrót, zgodnie z zasadami promocji.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">🎰</div>
+          <h3>Wypróbuj</h3>
+          <p>Poznaj kwalifikujące się gry, korzystając z dostępnych spinów promocyjnych.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎁</div>
+          <h3>Odbierz</h3>
+          <p>Sprawdź, jaka nagroda promocyjna została udostępniona przez koło.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">⭐</div>
+          <h3>Korzystaj</h3>
+          <p>Wykorzystaj bonus zgodnie z warunkami, wymaganiami i terminem oferty.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JAK TO DZIAŁA ============ -->
+  <section class="section section--alt" id="howSection">
+    <div class="container">
+      <h2 class="section-title">JAK TO DZIAŁA?</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>WEJDŹ</h3>
+          <p>Zakręć kołem i wejdź na oficjalną platformę promocji.</p>
+        </div>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>ZAREJESTRUJ SIĘ</h3>
+          <p>Załóż konto za darmo na platformie.</p>
+        </div>
+        <div class="step-arrow" aria-hidden="true">→</div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>DOKOŃCZ REJESTRACJĘ</h3>
+          <p>Zakończ rejestrację, aby odblokować bonus, zgodnie z regulaminem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LICZNIK ============ -->
+  <section class="section countdown-section" id="countdownSection" hidden>
+    <div class="container countdown-box">
+      <p class="countdown-label" id="countdownLabel"></p>
+      <div class="countdown" id="countdown" role="timer" aria-live="off">
+        <div class="cd-unit"><span id="cdDays">00</span><small>dni</small></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span id="cdHours">00</span><small>godz.</small></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span id="cdMin">00</span><small>min</small></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span id="cdSec">00</span><small>sek</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA KOŃCOWE ============ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container cta-box">
+      <h2 class="cta-title">TWÓJ BONUS JEST O JEDEN OBRÓT OD CIEBIE</h2>
+      <p class="cta-text">Weź udział w promocji i sprawdź, jaka nagroda jest dla Ciebie dostępna.</p>
+      <button class="btn btn--primary btn--large" id="ctaScroll"></button>
+    </div>
+  </section>
+</main>
+
+<!-- ============ STOPKA ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-note" id="footerNote"></p>
+    <p class="footer-responsible" id="footerResponsible"></p>
+    <nav class="footer-links" id="footerLinks"></nav>
+    <p class="footer-copy">© <span id="year"></span> <span id="footerBrand"></span>. Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+
+<!-- ============ STAŁE CTA MOBILE ============ -->
+<div class="sticky-cta" id="stickyCta" hidden>
+  <button class="btn btn--primary" id="stickySpin">🎰 ZAKRĘĆ KOŁEM</button>
+</div>
+
+<!-- ============ OKNO WYNIKU ============ -->
+<div class="modal-overlay" id="modalOverlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-glow" aria-hidden="true"></div>
+    <button class="modal-close" id="modalClose" aria-label="Zamknij">×</button>
+    <div class="modal-confetti" id="modalConfetti" aria-hidden="true"></div>
+    <p class="modal-eyebrow" id="modalTitle"></p>
+    <div class="modal-prize" id="modalPrize">
+      <span class="modal-prize__icon" id="modalPrizeIcon"></span>
+      <span class="modal-prize__label" id="modalPrizeLabel"></span>
+    </div>
+    <p class="modal-sub" id="modalSubtitle"></p>
+    <div class="modal-deposit" id="modalDeposit"></div>
+    <button class="btn btn--primary btn--large" id="modalCta"></button>
+    <p class="modal-fine" id="modalFine"></p>
+  </div>
+</div>
+
+<!-- ============ OKNO OFERTY (2. etap, przed linkiem) ============ -->
+<div class="modal-overlay" id="offerOverlay" hidden>
+  <div class="modal modal--offer" role="dialog" aria-modal="true" aria-labelledby="offerTitle">
+    <div class="modal-glow" aria-hidden="true"></div>
+    <button class="modal-close" id="offerClose" aria-label="Zamknij">×</button>
+    <p class="modal-eyebrow" id="offerTitle"></p>
+    <div class="offer-body" id="offerBody"></div>
+    <button class="btn btn--primary btn--large" id="offerCta"></button>
+    <p class="modal-fine" id="offerFine"></p>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
