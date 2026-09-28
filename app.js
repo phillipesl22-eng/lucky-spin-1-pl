@@ -409,7 +409,9 @@
     document.getElementById("spinBtn").addEventListener("click", spin);
     document.getElementById("ctaScroll").addEventListener("click", function () {
       track("cta_click", { location: "cta_section" });
-      scrollToWheel();
+      var url = CFG.ctaUrl || "#";
+      if (url && url !== "#") window.location.href = url;
+      else scrollToWheel();
     });
     var stickySpin = document.getElementById("stickySpin");
     if (stickySpin) stickySpin.addEventListener("click", function () {
