@@ -1,98 +1,98 @@
 /* ============================================================
-   LUCKY SPIN — KONFIGURACJA CENTRALNA (wersja PL)
-   Wszystko zmieniasz tutaj. Nie ruszaj index.html.
+   LUCKY SPIN — CONFIGURAZIONE CENTRALE (versione IT)
+   Modifichi tutto qui. Non toccare index.html.
    ============================================================ */
 window.PROMO_CONFIG = {
-  /* --- Tożsamość promocji --- */
+  /* --- Identità della promozione --- */
   name: "Lucky Spin",
   logoText: "LUCKY&nbsp;SPIN",
   logoImage: "",
 
-  /* --- Teksty sekcji Hero --- */
-  headline: "🎰 ZAKRĘĆ KOŁEM I ODKRYJ SWÓJ BONUS",
-  subheadline: "Twój kolejny bonus może być o jeden obrót od Ciebie.",
-  support: "Weź udział w promocji, zakręć kołem i sprawdź, jaka nagroda promocyjna jest dla Ciebie dostępna.",
-  legalBadge: "🔒 Promocja podlega regulaminowi",
-  wheelCaption: "Kliknij, aby odkryć swój bonus",
+  /* --- Testi della sezione Hero --- */
+  headline: "🎰 GIRA LA RUOTA E SCOPRI IL TUO BONUS",
+  subheadline: "Il tuo prossimo bonus potrebbe essere a un solo giro di distanza.",
+  support: "Partecipa alla promozione, gira la ruota e scopri quale premio promozionale è disponibile per te.",
+  legalBadge: "🔒 Promozione soggetta a termini e condizioni",
+  wheelCaption: "Clicca per scoprire il tuo bonus",
 
-  /* --- Nagrody na kole --- */
+  /* --- Premi sulla ruota --- */
   prizes: [
     {
       icon: "🎁",
-      label: "REJESTRACJA = 100 SPINÓW",
+      label: "REGISTRATI = 100 GIRI",
       color: "#C9A227",
-      result: "REJESTRACJA = 100 DARMOWYCH SPINÓW",
+      result: "RISCATTA 100 GIRI GRATIS",
       weight: 2
     },
     {
       icon: "💎",
-      label: "REJESTRACJA = 100 SPINÓW",
+      label: "REGISTRATI = 100 GIRI",
       color: "#1C1B29",
-      result: "REJESTRACJA = 100 DARMOWYCH SPINÓW",
+      result: "RISCATTA 100 GIRI GRATIS",
       weight: 2
     },
     {
       icon: "🎁",
-      label: "REJESTRACJA = 100 SPINÓW",
+      label: "REGISTRATI = 100 GIRI",
       color: "#C9A227",
-      result: "REJESTRACJA = 100 DARMOWYCH SPINÓW",
+      result: "RISCATTA 100 GIRI GRATIS",
       weight: 2
     },
     {
       icon: "💎",
-      label: "REJESTRACJA = 100 SPINÓW",
+      label: "REGISTRATI = 100 GIRI",
       color: "#1C1B29",
-      result: "REJESTRACJA = 100 DARMOWYCH SPINÓW",
+      result: "RISCATTA 100 GIRI GRATIS",
       weight: 2
     }
   ],
 
-  /* --- Wynik --- */
+  /* --- Risultato --- */
   forcedPrizeIndex: 1,
 
-  /* --- Animacja obrotu --- */
+  /* --- Animazione del giro --- */
   spinDurationMs: 2000,
   spinTurns: 5,
 
-  /* --- Okno wyniku --- */
-  modalTitle: "🎉 ODKRYŁEŚ SWÓJ BONUS",
-  modalSubtitle: "Aby odblokować bonus: wejdź na platformę, załóż konto i dokończ rejestrację. Nagroda jest dostępna zgodnie z regulaminem promocji.",
-  modalButton: "REJESTRACJA = 100 DARMOWYCH SPINÓW",
-  modalFinePrint: "Wymagane jest założenie konta i dokończenie rejestracji. Zapoznaj się z regulaminem i wymaganiami przed skorzystaniem z bonusu.",
+  /* --- Finestra del risultato --- */
+  modalTitle: "🎉 HAI SCOPERTO IL TUO BONUS",
+  modalSubtitle: "Per sbloccare il bonus: entra nella piattaforma, crea un account e completa la registrazione. Il premio è disponibile secondo i termini e le condizioni della promozione.",
+  modalButton: "🎁 RISCATTA 100 GIRI GRATIS",
+  modalFinePrint: "È necessario creare un account e completare la registrazione. Leggi i termini e i requisiti prima di usufruire del bonus.",
 
-  /* --- Komunikat aktywacji bonusu --- */
+  /* --- Messaggio di attivazione del bonus --- */
   modalDeposit:
-    "🎁 <b>REJESTRACJA = 100 DARMOWYCH SPINÓW</b>" +
-    "<span class=\"deposit-min\">⚠️ Załóż konto, aby aktywować darmowe spiny</span>",
+    "🎁 <b>RISCATTA 100 GIRI GRATIS</b>" +
+    "<span class=\"deposit-min\">⚠️ Crea un account per attivare i giri gratis</span>",
 
-  /* --- 2. ETAP: OFERTA --- */
+  /* --- 2ª FASE: OFFERTA --- */
   offer: {
-    title: "🔥 REJESTRACJA = 100 DARMOWYCH SPINÓW",
+    title: "🔥 RISCATTA 100 GIRI GRATIS",
     body:
-      '<p>Załóż konto i odbierz <b>100 darmowych spinów</b>, zgodnie z warunkami promocji.</p>' +
-      '<p class="offer-note">🎰 Wejdź, sprawdź zasady i aktywuj swoją promocję.</p>',
-    button: "🎁 REJESTRACJA = 100 DARMOWYCH SPINÓW",
-    fine: "Oferta ważna dla nowej rejestracji, podlega regulaminowi. Zapoznaj się z zasadami przed udziałem."
+      '<p>Crea un account e ricevi <b>100 giri gratis</b>, secondo i termini della promozione.</p>' +
+      '<p class="offer-note">🎰 Entra, controlla le regole e attiva la tua promozione.</p>',
+    button: "🎁 RISCATTA 100 GIRI GRATIS",
+    fine: "Offerta valida per le nuove registrazioni, soggetta a termini e condizioni. Leggi le regole prima di partecipare."
   },
 
-  /* --- CTA / cel --- */
+  /* --- CTA / obiettivo --- */
   ctaUrl: "https://spinlendos.com/iframe-mgeo-reg-nb/?p=%2Fbonus%2Fcasino%2Fpromotions%2Fslot_first_deposit&id=3cDA",
-  ctaButton: "🎁 REJESTRACJA = 100 DARMOWYCH SPINÓW",
+  ctaButton: "🎁 RISCATTA 100 GIRI GRATIS",
 
-  /* --- Licznik --- */
+  /* --- Conto alla rovescia --- */
   endDate: "2026-12-31T23:59:59",
-  countdownLabel: "⏰ PROMOCJA DOSTĘPNA DO:",
+  countdownLabel: "⏰ PROMOZIONE DISPONIBILE FINO AL:",
 
-  /* --- Stopka / linki prawne --- */
-  footerNote: "Promocja zależna od dostępności, kwalifikowalności oraz regulaminu. Zapoznaj się z zasadami przed udziałem.",
-  responsibleNote: "Graj odpowiedzialnie. Zakaz gry dla osób poniżej 18 roku życia.",
+  /* --- Footer / link legali --- */
+  footerNote: "Promozione soggetta a disponibilità, idoneità e termini e condizioni. Leggi le regole prima di partecipare.",
+  responsibleNote: "Gioca responsabilmente. Vietato ai minori di 18 anni.",
   links: {
     terms: "#",
     privacy: "#",
     responsible: "#"
   },
 
-  /* --- Kolory / motyw --- */
+  /* --- Colori / tema --- */
   theme: {
     gold: "#D4AF37",
     goldSoft: "#C9A227",

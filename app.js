@@ -48,7 +48,7 @@
     setHTML("headline", CFG.headline);
     setText("subheadline", CFG.subheadline);
     setText("support", CFG.support);
-    setText("wheelCaption", CFG.wheelCaption || "Kliknij, aby odkryć swój bonus");
+    setText("wheelCaption", CFG.wheelCaption || "Clicca per scoprire il tuo bonus");
 
     // modal
     setText("modalTitle", CFG.modalTitle);
@@ -59,10 +59,10 @@
       if (CFG.modalDeposit) { depEl.innerHTML = CFG.modalDeposit; depEl.style.display = ""; }
       else { depEl.style.display = "none"; }
     }
-    document.getElementById("modalCta").textContent = CFG.modalButton || "CONTINUAR";
+    document.getElementById("modalCta").textContent = CFG.modalButton || "CONTINUA";
 
     // cta
-    document.getElementById("ctaScroll").innerHTML = CFG.ctaButton || "🎰 ZAKRĘĆ KOŁEM";
+    document.getElementById("ctaScroll").innerHTML = CFG.ctaButton || "🎰 GIRA LA RUOTA";
 
     // footer
     setText("footerNote", CFG.footerNote);
@@ -71,9 +71,9 @@
     var links = CFG.links || {};
     var nav = document.getElementById("footerLinks");
     nav.innerHTML =
-      '<a href="' + (links.terms || "#") + '">Regulamin</a>' +
-      '<a href="' + (links.privacy || "#") + '">Polityka Prywatności</a>' +
-      '<a href="' + (links.responsible || "#") + '">Odpowiedzialna Gra</a>';
+      '<a href="' + (links.terms || "#") + '">Termini e Condizioni</a>' +
+      '<a href="' + (links.privacy || "#") + '">Informativa sulla Privacy</a>' +
+      '<a href="' + (links.responsible || "#") + '">Gioco Responsabile</a>';
   }
   function setText(id, v) { var e = document.getElementById(id); if (e && v != null) e.textContent = v; }
   function setHTML(id, v) { var e = document.getElementById(id); if (e && v != null) e.innerHTML = v; }
@@ -82,8 +82,8 @@
      ROLETA (canvas)
      ========================================================= */
   var prizes = CFG.prizes && CFG.prizes.length ? CFG.prizes : [
-    { icon: "🎰", label: "10 darmowych spinów", color: "#C9A227", result: "10 DARMOWYCH SPINÓW" },
-    { icon: "🎁", label: "Powitalny", color: "#1C1B29", result: "BONUS POWITALNY" }
+    { icon: "🎰", label: "10 giri gratis", color: "#C9A227", result: "10 GIRI GRATIS" },
+    { icon: "🎁", label: "Benvenuto", color: "#1C1B29", result: "BONUS DI BENVENUTO" }
   ];
   var N = prizes.length;
   var seg = 360 / N;               // graus por segmento
@@ -293,7 +293,7 @@
     if (isNaN(end)) return;
     var sec = document.getElementById("countdownSection");
     sec.hidden = false;
-    document.getElementById("countdownLabel").textContent = CFG.countdownLabel || "⏰ PROMOÇÃO DISPONÍVEL ATÉ:";
+    document.getElementById("countdownLabel").textContent = CFG.countdownLabel || "⏰ PROMOZIONE DISPONIBILE FINO AL:";
     function pad(n) { return (n < 10 ? "0" : "") + n; }
     function tick() {
       var now = Date.now();
