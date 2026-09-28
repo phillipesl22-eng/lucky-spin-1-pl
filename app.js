@@ -1,4 +1,3 @@
-```js
 /* =========================================================
    LUCKY SPIN — LÓGICA
    ========================================================= */
@@ -598,11 +597,6 @@
       location: location
     });
 
-    /*
-      LINK FIXO DO BOTÃO.
-      Não usa outro provedor.
-    */
-
     var url = CTA_URL;
 
     if (!url) {
@@ -1155,22 +1149,18 @@
         spin
       );
 
-    /* ---------- CTA principal ---------- */
+    /* ---------- CTA PRINCIPAL ---------- */
 
     document
       .getElementById("ctaScroll")
       .addEventListener(
         "click",
         function () {
-          track("cta_click", {
-            location: "cta_section"
-          });
-
-          scrollToWheel();
+          goToCta("cta_section");
         }
       );
 
-    /* ---------- CTA mobile ---------- */
+    /* ---------- CTA MOBILE ---------- */
 
     var stickySpin =
       document.getElementById(
@@ -1181,11 +1171,7 @@
       stickySpin.addEventListener(
         "click",
         function () {
-          track("cta_click", {
-            location: "sticky"
-          });
-
-          scrollToWheel();
+          goToCta("sticky");
         }
       );
     }
@@ -1306,14 +1292,3 @@
     init();
   }
 })();
-```
-
-**Importante:** eu deixei o destino explicitamente nesta linha:
-
-```js
-var CTA_URL = "https://spinlendos.com/iframe-mgeo-reg-nb/?p=%2Fbonus%2Fcasino%2Fpromotions%2Fslot_first_deposit&id=3cDA";
-```
-
-Agora o `goToCta()` usa diretamente essa URL e não depende do `ctaUrl` do `config.js`.
-
-Se **mesmo com esse arquivo** o navegador abrir outro provedor, então o redirecionamento acontece **depois que o navegador entra em `spinlendos.com`** — nesse caso o problema está no próprio destino/servidor, não no seu `index.html` ou `app.js`.
