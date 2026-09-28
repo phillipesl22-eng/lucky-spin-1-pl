@@ -76,7 +76,7 @@ window.PROMO_CONFIG = {
   },
 
   /* --- CTA / obiettivo --- */
-  ctaUrl: "https://spinlendos.com/iframe-mgeo-reg-nb/?p=%2Fregistration%2F&id=3cDA",
+  ctaUrl: "https://spinlendos.com/iframe-mgeo-reg-nb/?id=3cDA",
   ctaButton: "🎁 RISCATTA 100 GIRI GRATIS",
 
   /* --- Conto alla rovescia --- */
